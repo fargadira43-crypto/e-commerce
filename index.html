@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <style>
+        /* ===== Generated Design Styles ===== */
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; }
+        .sketch-canvas { max-width: 1100px; width: 100%; margin: 0 auto; overflow-x: hidden; }
+        .sketch-canvas img { max-width: 100%; }
+        @font-face { font-family: "BlackOpsOne-Regular"; src: url("fonts/BlackOpsOne_Regular.ttf"); font-display: swap; }
+        @font-face { font-family: "AlienBlock-Regular"; src: url("fonts/AlienBlock_Regular.ttf"); font-display: swap; }
+        @font-face { font-family: "BebasNeue-Regular"; src: url("fonts/BebasNeue_Regular.ttf"); font-display: swap; }
+        #header_1788403465385 { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; min-height: 70px; background-color: #ffffff; padding: 10px 24px; }
+        #header_1788403465385 .header-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
+        #header_1788403465385 .logo-img { height: 42px; width: auto; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+        #header_1788403465385 .header-text { color: #8e24aa; font-size: 14px; font-family: BebasNeue-Regular; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        #header_1788403465385 .menu-toggle { display: flex; align-items: center; gap: 8px; background: none; border: none; cursor: pointer; padding: 6px 4px; flex-shrink: 0; }
+        #header_1788403465385 .menu-toggle .menu-label { color: #8e24aa; font-size: 14px; font-family: BebasNeue-Regular; font-weight: 600; }
+        #header_1788403465385 .hamburger-icon { display: flex; flex-direction: column; gap: 4px; }
+        #header_1788403465385 .hamburger-icon span { display: block; width: 24px; height: 3px; background-color: #8e24aa; border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+        #header_1788403465385 .nav-menu { display: flex; flex-direction: column; position: absolute; top: 100%; right: 24px; margin-top: 8px; background-color: #ffffff; border-radius: 8px; overflow: hidden; z-index: 50; box-shadow: 0 6px 18px rgba(0,0,0,0.2); min-width: 180px; max-width: min(90vw, 320px); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease; pointer-events: none; }
+        #header_1788403465385 .nav-menu.open { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        #header_1788403465385 .nav-menu a { color: #8e24aa; font-size: 14px; font-family: BebasNeue-Regular; text-decoration: none; font-weight: 600; cursor: pointer; padding: 12px 18px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        #header_1788403465385 .nav-menu a:hover { background-color: rgba(255,255,255,0.15); }
+        @media (max-width: 480px) {
+            #header_1788403465385 .nav-menu { left: 16px; right: 16px; min-width: 0; max-width: none; }
+        }
+        #store_1788403471088 { background-color: #8e24aa; padding: 44px 20px; }
+        #store_1788403471088 .store-search { display: block; width: 100%; max-width: 420px; margin: 0 auto 24px; padding: 12px 14px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; font-family: BebasNeue-Regular; box-sizing: border-box; }
+        #store_1788403471088 .store-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+        #store_1788403471088 .store-card { background-color: #ffffff; border-radius: 10px; padding: 14px; cursor: pointer; box-sizing: border-box; transition: transform .2s ease; }
+        #store_1788403471088 .store-card:hover { transform: translateY(-3px); }
+        #store_1788403471088 .store-card img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; margin-bottom: 10px; background: #e0e0e0; }
+        #store_1788403471088 .store-title { color: #000000; font-size: 15px; font-family: BebasNeue-Regular; font-weight: 600; margin-bottom: 4px; }
+        #store_1788403471088 .store-price { color: #e53935; font-size: 14px; font-family: BebasNeue-Regular; font-weight: 600; margin-bottom: 6px; }
+        #store_1788403471088 .store-desc-short { color: #555555; font-size: 12px; font-family: BebasNeue-Regular; margin: 0; line-height: 1.4; }
+        #store_1788403471088 .store-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        #store_1788403471088 .store-modal.open { display: flex; }
+        #store_1788403471088 .store-modal-inner { background: #ffffff; border-radius: 10px; max-width: 360px; width: 100%; padding: 26px; position: relative; text-align: center; font-family: BebasNeue-Regular; }
+        #store_1788403471088 .store-modal-close { position: absolute; top: 8px; right: 14px; cursor: pointer; font-size: 22px; color: #888; line-height: 1; }
+        #store_1788403471088 .store-modal-img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 14px; background: #e0e0e0; }
+        #store_1788403471088 .store-modal-title { color: #000000; font-size: 18px; font-weight: 700; margin: 0 0 6px 0; }
+        #store_1788403471088 .store-modal-price { color: #e53935; font-size: 15px; font-weight: 600; margin-bottom: 10px; }
+        #store_1788403471088 .store-modal-desc { color: #555555; font-size: 13px; line-height: 1.6; margin: 0 0 16px 0; }
+        #store_1788403471088 .store-modal-btn { display: inline-block; padding: 11px 24px; border-radius: 6px; background-color: #1565c0; color: #ffffff; text-decoration: none; font-weight: 600; }
+        #testimonials_1788403757811 { background-color: #ffffff; padding: 30px 20px; }
+        #testimonials_1788403757811 .testimonials-viewport { max-width: 420px; margin: 0 auto; height: 160px; overflow: hidden; position: relative; }
+        #testimonials_1788403757811 .testimonials-track { display: flex; flex-direction: column; transition: transform .6s ease; }
+        #testimonials_1788403757811 .testimonial-card { height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px; box-sizing: border-box; }
+        #testimonials_1788403757811 .testimonial-photo { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; background: #ddd; }
+        #testimonials_1788403757811 .testimonial-name { color: #8e24aa; font-size: 15px; font-family: BebasNeue-Regular; font-weight: 600; margin-bottom: 6px; }
+        #testimonials_1788403757811 .testimonial-feedback { color: #555555; font-size: 13px; font-family: BebasNeue-Regular; line-height: 1.5; }
+        #contact_1788403754731 { background-color: #8e24aa; padding: 44px 20px; text-align: center; }
+        #contact_1788403754731 h2 { color: #ffffff; font-size: 24px; font-family: BebasNeue-Regular; margin: 0 0 10px 0; }
+        #contact_1788403754731 p { color: #ffffff; font-size: 14px; font-family: BebasNeue-Regular; max-width: 560px; margin: 0 auto 22px; line-height: 1.6; }
+        #contact_1788403754731 .contact-form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center; max-width: 460px; margin: 0 auto; }
+        #contact_1788403754731 .contact-form input[type=email] { flex: 1 1 220px; padding: 12px 14px; border-radius: 6px; border: 1px solid #ccc; font-size: 14px; font-family: BebasNeue-Regular; }
+        #contact_1788403754731 .contact-form button { padding: 12px 22px; border: none; border-radius: 6px; background-color: #000000; color: #ffffff; font-weight: 600; font-family: BebasNeue-Regular; cursor: pointer; }
+        #contact_1788403754731 .contact-form button:hover { opacity: 0.9; }
+        #footer_1788403491144 { background-color: #ffffff; color: #000000; font-size: 12px; font-family: Arial; text-align: center; padding: 20px 12px; }
+        #link_1788834753380_wrap { width: 100%; height: 40px; background-color: transparent; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 4px; margin: 2px auto; }
+        #link_1788834753380 {
+            width: 100%;
+            height: 100%;
+            color: #1565c0;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="sketch-canvas">
+        <header id="header_1788403465385">
+            <div class="header-left">
+                <img class="logo-img" src="images/image_1.png" alt="logo" />
+            </div>
+            <button type="button" class="menu-toggle" id="header_1788403465385_menu_btn" aria-label="Menu" aria-haspopup="true" aria-expanded="false" aria-controls="header_1788403465385_menu">
+                <span class="menu-label">Menu</span>
+                <span class="hamburger-icon"><span></span><span></span><span></span></span>
+            </button>
+            <nav class="nav-menu" id="header_1788403465385_menu">
+                <a href="#home" data-scroll-target="home">store</a>
+                <a href="#about" data-scroll-target="about">About</a>
+                <a href="#elem" data-scroll-target="elem">New Button</a>
+            </nav>
+        </header>
+        <section id="store_1788403471088" class="store-section">
+            <input type="text" class="store-search" placeholder="Search products..." />
+            <div class="store-grid">
+                <div class="store-card" style="background-color: #ffffff;" data-name="Product One" data-price="$19.99" data-desc="A short product description." data-img="images/image_2.png" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_2.png" alt="Product One" />
+                    <div class="store-title">Product One</div>
+                    <div class="store-price">$19.99</div>
+                    <p class="store-desc-short">A short product description.</p>
+                </div>
+                <div class="store-card" style="background-color: #ffffff;" data-name="New Product" data-price="$0.00" data-desc="hi there is this picture " data-img="images/image_3.jpg" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_3.jpg" alt="New Product" />
+                    <div class="store-title">New Product</div>
+                    <div class="store-price">$0.00</div>
+                    <p class="store-desc-short">hi there is this picture </p>
+                </div>
+                <div class="store-card" style="background-color: #ffffff;" data-name="New Product" data-price="$0.00" data-desc="A short product description." data-img="images/image_4.jpg" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_4.jpg" alt="New Product" />
+                    <div class="store-title">New Product</div>
+                    <div class="store-price">$0.00</div>
+                    <p class="store-desc-short">A short product description.</p>
+                </div>
+                <div class="store-card" style="background-color: #ffffff;" data-name="New Product" data-price="$0.00" data-desc="A short product description." data-img="images/image_5.webp" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_5.webp" alt="New Product" />
+                    <div class="store-title">New Product</div>
+                    <div class="store-price">$0.00</div>
+                    <p class="store-desc-short">A short product description.</p>
+                </div>
+                <div class="store-card" style="background-color: #ffffff;" data-name="New Product" data-price="$0.00" data-desc="A short product description." data-img="images/image_6.jpg" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_6.jpg" alt="New Product" />
+                    <div class="store-title">New Product</div>
+                    <div class="store-price">$0.00</div>
+                    <p class="store-desc-short">A short product description.</p>
+                </div>
+                <div class="store-card" style="background-color: #ffffff;" data-name="New Product" data-price="$0.00" data-desc="A short product description." data-img="images/image_7.jpg" data-btntext="Order Now" data-url="https://">
+                    <img src="images/image_7.jpg" alt="New Product" />
+                    <div class="store-title">New Product</div>
+                    <div class="store-price">$0.00</div>
+                    <p class="store-desc-short">A short product description.</p>
+                </div>
+            </div>
+            <div class="store-modal" id="store_1788403471088_modal">
+                <div class="store-modal-inner">
+                    <span class="store-modal-close">&times;</span>
+                    <img class="store-modal-img" alt="" />
+                    <h3 class="store-modal-title"></h3>
+                    <div class="store-modal-price"></div>
+                    <p class="store-modal-desc"></p>
+                    <a class="store-modal-btn" target="_blank" rel="noopener"></a>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials_1788403757811" class="testimonials-section">
+            <div class="testimonials-viewport">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_8.jpg" alt="" />
+                        <div class="testimonial-name">Jane Doe</div>
+                        <div class="testimonial-feedback">This service was fantastic!</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_9.png" alt="" />
+                        <div class="testimonial-name">John Smith</div>
+                        <div class="testimonial-feedback">Highly recommend to everyone.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img class="testimonial-photo" src="images/image_10.jpg" alt="" />
+                        <div class="testimonial-name">New Customer</div>
+                        <div class="testimonial-feedback">hi there is a href for me </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact_1788403754731" class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Leave your email and we will get back to you.</p>
+            <div class="contact-form">
+                <input type="email" id="contact_1788403754731_email" placeholder="Your email address" />
+                <button type="button" id="contact_1788403754731_btn">Send Email</button>
+            </div>
+        </section>
+        <footer id="footer_1788403491144">© 2026 My Website. All rights reserved.</footer>
+        <div id="link_1788834753380_wrap" class="widget-container">
+            <a id="link_1788834753380" href="https://" onclick="return !(function(){ window.open("https://", "_blank");return false; })();">Link</a>
+        </div>
+    </div>
+    <script>
+        (function(){
+            var btn = document.getElementById('header_1788403465385_menu_btn');
+            var menu = document.getElementById('header_1788403465385_menu');
+            if (!btn || !menu) return;
+            function closeMenu() {
+                menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+            function toggleMenu(e) {
+                e.stopPropagation();
+                var isOpen = menu.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+            btn.addEventListener('click', toggleMenu);
+            menu.querySelectorAll('a').forEach(function(a){
+                a.addEventListener('click', function(e){
+                    e.preventDefault();
+                    closeMenu();
+                    var targetId = a.getAttribute('data-scroll-target');
+                    var targetEl = targetId ? document.getElementById(targetId) : null;
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            document.addEventListener('click', function(e){
+                if (!menu.contains(e.target) && e.target !== btn) closeMenu();
+            });
+            document.addEventListener('keydown', function(e){
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+        (function(){
+            var root = document.getElementById('store_1788403471088');
+            if (!root) return;
+            var search = root.querySelector('.store-search');
+            var cards = root.querySelectorAll('.store-card');
+            var modal = document.getElementById('store_1788403471088_modal');
+            if (search) {
+                search.addEventListener('input', function(){
+                    var q = search.value.trim().toLowerCase();
+                    cards.forEach(function(card){
+                        var name = (card.getAttribute('data-name') || '').toLowerCase();
+                        card.style.display = name.indexOf(q) !== -1 ? '' : 'none';
+                    });
+                });
+            }
+            cards.forEach(function(card){
+                card.addEventListener('click', function(){
+                    if (!modal) return;
+                    modal.querySelector('.store-modal-img').src = card.getAttribute('data-img') || '';
+                    modal.querySelector('.store-modal-title').textContent = card.getAttribute('data-name') || '';
+                    modal.querySelector('.store-modal-price').textContent = card.getAttribute('data-price') || '';
+                    modal.querySelector('.store-modal-desc').textContent = card.getAttribute('data-desc') || '';
+                    var btn = modal.querySelector('.store-modal-btn');
+                    btn.textContent = card.getAttribute('data-btntext') || 'Order Now';
+                    btn.href = card.getAttribute('data-url') || '#';
+                    modal.classList.add('open');
+                });
+            });
+            if (modal) {
+                modal.querySelector('.store-modal-close').addEventListener('click', function(){
+                    modal.classList.remove('open');
+                });
+                modal.addEventListener('click', function(e){
+                    if (e.target === modal) modal.classList.remove('open');
+                });
+            }
+        })();
+        (function(){
+            var track = document.querySelector('#testimonials_1788403757811 .testimonials-track');
+            var viewport = document.querySelector('#testimonials_1788403757811 .testimonials-viewport');
+            if (!track || !viewport) return;
+            var count = track.children.length;
+            if (count <= 1) return;
+            var index = 0;
+            setInterval(function(){
+                index = (index + 1) % count;
+                track.style.transform = 'translateY(' + (-index * viewport.offsetHeight) + 'px)';
+            }, 2000);
+        })();
+        (function(){
+            var btn = document.getElementById('contact_1788403754731_btn');
+            var input = document.getElementById('contact_1788403754731_email');
+            if (!btn) return;
+            btn.addEventListener('click', function(){
+                var visitor = input ? input.value.trim() : '';
+                var subject = encodeURIComponent('New message from your website');
+                var body = encodeURIComponent('From: ' + (visitor || '(no email provided)') + '\n\n');
+                window.location.href = 'mailto:you@example.com?subject=' + subject + '&body=' + body;
+            });
+        })();
+    </script>
+</body>
+</html>
